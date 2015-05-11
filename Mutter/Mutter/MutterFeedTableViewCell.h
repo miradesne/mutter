@@ -10,5 +10,6 @@
 
 @interface MutterFeedTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *feedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *feedCreatedDateLabel;
 
 @end

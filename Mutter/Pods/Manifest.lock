@@ -5,14 +5,35 @@ PODS:
   - Bolts/AppLinks (1.1.5):
     - Bolts/Tasks
   - Bolts/Tasks (1.1.5)
+  - FormatterKit (1.8.0):
+    - FormatterKit/AddressFormatter (= 1.8.0)
+    - FormatterKit/ArrayFormatter (= 1.8.0)
+    - FormatterKit/ColorFormatter (= 1.8.0)
+    - FormatterKit/LocationFormatter (= 1.8.0)
+    - FormatterKit/NameFormatter (= 1.8.0)
+    - FormatterKit/OrdinalNumberFormatter (= 1.8.0)
+    - FormatterKit/TimeIntervalFormatter (= 1.8.0)
+    - FormatterKit/UnitOfInformationFormatter (= 1.8.0)
+    - FormatterKit/URLRequestFormatter (= 1.8.0)
+  - FormatterKit/AddressFormatter (1.8.0)
+  - FormatterKit/ArrayFormatter (1.8.0)
+  - FormatterKit/ColorFormatter (1.8.0)
+  - FormatterKit/LocationFormatter (1.8.0)
+  - FormatterKit/NameFormatter (1.8.0)
+  - FormatterKit/OrdinalNumberFormatter (1.8.0)
+  - FormatterKit/TimeIntervalFormatter (1.8.0)
+  - FormatterKit/UnitOfInformationFormatter (1.8.0)
+  - FormatterKit/URLRequestFormatter (1.8.0)
   - Parse (1.7.2):
     - Bolts (~> 1.1)
 
 DEPENDENCIES:
+  - FormatterKit
   - Parse
 
 SPEC CHECKSUMS:
   Bolts: aac24961496d504aa56fc267cde95162a71bac39
+  FormatterKit: bddde83e054edf9d9ee14f9de3b3a5103db256f4
   Parse: e1959adb9fe2fcd4736dac20b3ac691d47a4f06c
 
 COCOAPODS: 0.36.4

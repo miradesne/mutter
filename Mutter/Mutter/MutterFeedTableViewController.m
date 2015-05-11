@@ -8,8 +8,9 @@
 
 #import "MutterFeedTableViewController.h"
 #import "MutterFeedTableViewCell.h"
+#import <FormatterKit/TTTTimeIntervalFormatter.h>
 @interface MutterFeedTableViewController ()
-@property (strong, nonatomic) NSArray *feeds;
+@property (strong, nonatomic) NSMutableArray *feeds;
 @end
 
 @implementation MutterFeedTableViewController
@@ -34,9 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSArray*)feeds {
+- (NSMutableArray*)feeds {
     if (!_feeds) {
-        _feeds = [[NSArray alloc] init];
+        _feeds = [[NSMutableArray alloc] init];
     }
     return _feeds;
 }
@@ -58,10 +59,10 @@
     MutterFeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MutterFeedCell" forIndexPath:indexPath];
     PFObject *feed = [self.feeds objectAtIndex:indexPath.row
                       ];
-    
     // Configure the cell...
     cell.feedLabel.text = [feed objectForKey:@"Title"];
-    
+    NSString *feedCreatedPrettyTime = [[[TTTTimeIntervalFormatter alloc] init] stringForTimeInterval:[feed.createdAt timeIntervalSinceNow]];
+    cell.feedCreatedDateLabel.text = [NSString stringWithFormat:@"- %@",feedCreatedPrettyTime];
     return cell;
 }
 
@@ -105,7 +106,9 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded. The first 100 objects are available in objects
-            self.feeds = objects;
+            self.feeds = [NSMutableArray arrayWithArray:objects];
+            NSSortDescriptor* sortByDate = [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO];
+            [self.feeds sortUsingDescriptors:[NSArray arrayWithObject:sortByDate]];
             [self.tableView reloadData];
         } else {
             // Log details of the failure

@@ -33,6 +33,7 @@
     if (self.feedInputTextView.text.length > 0) {
         PFObject *newFeed = [PFObject objectWithClassName:@"Story"];
         [newFeed setObject:self.feedInputTextView.text forKey:@"Title"];
+        [newFeed setObject:@([[NSDate date] timeIntervalSince1970]) forKey:@"Timestamp"];
         [newFeed saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (succeeded) {
                 [self dismissViewControllerAnimated:YES completion:nil];

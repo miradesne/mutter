@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5D96201B0038B400F17F7B /* MutterConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D961F1B0038B400F17F7B /* MutterConstants.m */; };
 		0EBDD9541AF1DDE400CAE728 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBDD9531AF1DDE400CAE728 /* main.m */; };
 		0EBDD9571AF1DDE400CAE728 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBDD9561AF1DDE400CAE728 /* AppDelegate.m */; };
 		0EBDD95A1AF1DDE400CAE728 /* MutterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBDD9591AF1DDE400CAE728 /* MutterLoginViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E5D961E1B0038B400F17F7B /* MutterConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutterConstants.h; sourceTree = "<group>"; };
+		0E5D961F1B0038B400F17F7B /* MutterConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutterConstants.m; sourceTree = "<group>"; };
 		0EBDD94E1AF1DDE400CAE728 /* Mutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBDD9521AF1DDE400CAE728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EBDD9531AF1DDE400CAE728 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				0EBDD9821AF1F1CB00CAE728 /* MutterComposeFeedViewController.m */,
 				0EBDD97E1AF1EFFD00CAE728 /* MutterFeedTableViewCell.h */,
 				0EBDD97F1AF1EFFD00CAE728 /* MutterFeedTableViewCell.m */,
+				0E5D961E1B0038B400F17F7B /* MutterConstants.h */,
+				0E5D961F1B0038B400F17F7B /* MutterConstants.m */,
 				0EBDD95B1AF1DDE400CAE728 /* Main.storyboard */,
 				0EBDD97C1AF1EDE500CAE728 /* ComposeFeed.storyboard */,
 				0EBDD95E1AF1DDE400CAE728 /* Images.xcassets */,
@@ -300,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EBDD9831AF1F1CB00CAE728 /* MutterComposeFeedViewController.m in Sources */,
+				0E5D96201B0038B400F17F7B /* MutterConstants.m in Sources */,
 				0EBDD95A1AF1DDE400CAE728 /* MutterLoginViewController.m in Sources */,
 				0EBDD9571AF1DDE400CAE728 /* AppDelegate.m in Sources */,
 				0EBDD9801AF1EFFD00CAE728 /* MutterFeedTableViewCell.m in Sources */,
